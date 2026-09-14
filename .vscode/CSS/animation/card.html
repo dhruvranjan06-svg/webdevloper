@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Cards</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eae5ff;
+            padding: 40px 30px;
+        }
+
+        .card-container {
+            background-color: rgb(238, 253, 253);
+
+            padding: 40px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 200px);
+
+            column-gap: 30px;
+            row-gap: 30px;
+
+            justify-content: center;
+        }
+
+        .movie-card {
+            width: 200px;
+
+            border: 2px solid #00000014;
+
+            border-radius: 16px;
+
+            background-color: white;
+
+            overflow: hidden;
+
+            transition: all 0.5s;
+
+            animation: CardAnimation 1s ease;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-image {
+            width: 100%;
+            height: 260px;
+
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .movie-info {
+            padding: 12px 13px;
+        }
+
+        .movie-info h5 {
+            font-size: 16px;
+
+            font-weight: 600;
+
+            line-height: 20px;
+
+            margin-bottom: 3px;
+        }
+
+        .movie-rating {
+            font-size: 12px;
+
+            font-weight: 500;
+
+            line-height: 16px;
+
+            color: #6B7280;
+        }
+
+        .book-now {
+            display: block;
+
+            margin-top: 12px;
+
+            padding: 9px;
+
+            text-align: center;
+
+            background-color: #e63946;
+
+            color: white;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+        .book-now:hover {
+            background-color: #c1121f;
+        }
+
+        @keyframes CardAnimation {
+
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .card-container {
+                grid-template-columns: repeat(2, 200px);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .card-container {
+                grid-template-columns: 200px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="card-container">
+
+
+        <!-- CARD 1 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Hanuman Ansh
+                </h5>
+
+                <span class="movie-rating">
+                    U | Hindi
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Toxic: A Fairy Tale for Grown-ups
+                </h5>
+
+                <span class="movie-rating">
+                    A | Hindi and 1 more
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Mirzapur: The Movie
+                </h5>
+
+                <span class="movie-rating">
+                    A | Hindi
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/AW_Poster-18591030-9548-11f1-b29d-8985d3d6c644.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Awarapan 2
+                </h5>
+
+                <span class="movie-rating">
+                    UA16+ | Hindi
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Hanuman Ansh
+                </h5>
+
+                <span class="movie-rating">
+                    U | Hindi
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+
+        <div class="movie-card">
+
+            <div class="movie-image">
+
+                <img
+                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                    alt="movie_image">
+
+            </div>
+
+            <div class="movie-info">
+
+                <h5 class="movie-title">
+                    Hanuman Ansh
+                </h5>
+
+                <span class="movie-rating">
+                    U | Hindi
+                </span>
+
+                <a href="#" class="book-now">
+                    Book Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

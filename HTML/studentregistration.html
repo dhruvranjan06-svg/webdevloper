@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 350px;
+            margin: 20px auto;
+            padding: 25px;
+            border: 1px solid gray;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"] {
+            width: 180px;
+        }
+
+        textarea {
+            width: 180px;
+            height: 60px;
+        }
+
+        .register {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+        }
+
+        .cancel {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Full Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <br><br>
+
+        <!-- University Email -->
+        <label for="email">University Email:</label>
+        <input type="email" id="email" placeholder="Enter Email">
+
+        <br><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter Age">
+
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+
+        <br><br>
+
+        <!-- Skills -->
+        <label>Skills:</label>
+
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js">
+        <label for="js">JavaScript</label>
+
+        <br><br>
+
+        <!-- Upload File -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file">
+
+        <br><br>
+
+        <!-- Branch -->
+        <label for="branch">Branch:</label>
+
+        <select id="branch">
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>ME</option>
+            <option>CE</option>
+        </select>
+
+        <br><br>
+
+        <!-- Notes -->
+        <label for="notes">Notes:</label>
+        <br>
+
+        <textarea id="notes"></textarea>git status
+
+        <br>
+        <label>Gender:</label>
+
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label>
+<br>
+
+        <!-- Buttons -->
+        <input type="button" value="Register" class="register">
+
+        <input type="reset" value="Cancel" class="cancel">
+
+    </form>
+
+</body>
+
+</html>

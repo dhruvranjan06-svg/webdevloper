@@ -1,0 +1,170 @@
+/* cascading style sheet */
+/* h1{
+    color:rgba(255, 166, 0, 0.664)
+}
+p{
+    color:hsla(187, 100%, 50%, 0.664)
+}
+button{
+    color:hsla(261, 100%, 50%, 0.664)
+    
+}
+body{
+    background-color: rgb(0, 238, 255);
+    
+
+}
+body{
+    background-color: #ffff00;
+
+} */
+
+/* SELECTORS */
+
+/* 1.UNIVERSAL SELECTOR 
+*{} */
+/* *{
+    color:rgba(192, 237, 255, 0.479);
+}
+ /* 2. element selector 
+ h1{} */
+ /* h1{
+    color:green;
+ }
+
+ /* id selector
+ #mypid{}*/
+ /* #headingone{
+    color:red;
+ }
+ #headingfive{
+    color:rgb(0, 255, 13);
+ }
+ 
+.myclass{
+    color:rgba(240, 248, 255, 0.226)
+} */
+ /*class selector
+ .myclass{}*/ 
+
+
+
+
+ /* Text Properties */
+
+/* text-align
+text-align : left / right / center */
+/* p {
+    text-align: center;
+}
+p {
+    text-align: left;
+}
+p {
+    text-align: right;
+} */
+
+/* text-decoration
+text-decoration : underline / overline / line-through */
+/* p {
+    text-decoration: line-through;
+} */
+
+/* font-weight
+font-weight : normal / bold / bolder / lighter
+font-weight : 100-900 */
+/* p{
+    font-weight: bolder;
+} */
+
+
+/* font-family
+font-family : arial
+font-family : arial, roboto */
+/* p{
+    font-family: Arial, Roboto;
+} */
+
+
+/* Units in CSS */
+
+
+/* Absolute */
+
+
+/* pixels (px)
+96px = 1 inch
+
+font-size: 2px; */
+p {
+    font-size: 20px;
+}
+
+/* 1. line-height */
+/* p {
+    line-height: 2px;
+} */
+/* p {
+    line-height: 3;
+} */
+
+/* p {
+    line-height: normal;
+} */
+
+
+
+/* 2. text-transform */
+p {
+    text-transform: lowercase;
+}
+h2{
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: bisque;
+    font-style: oblique;
+    font-size: larger;
+    font-weight: 800px;
+    
+    font-variant-numeric: lining-nums;
+    line-height: normal;
+    list-style: none;
+    line-break: loose;
+    letter-spacing: 7px;
+    text-align: start;
+    text-decoration: underline;
+    text-transform: lowercase;
+    text-overflow: ellipsis;
+    text-shadow: 10px -10px 10 px red;
+    text-indent: 100px;
+    
+    text-size-adjust: inherit;
+    text-decoration-color: blue;
+    text-indent: 0cap;
+    text-box-edge: calc();
+    text-box-trim: trim-both;
+    text-combine-upright: inherit;
+    -ms-text-combine-horizontal: all;
+}
+#dhruv{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100px;
+    font-size: small;
+    font-style: italic;
+    font-display: fallback;
+    font-variant: small-caps;
+}
+/* color property */
+h3{
+    color:greenyellow;
+    color:green;
+    color: #00ff;
+    color: #f0f;
+    /* color: #ff0000; */
+    /* color: rgba(255, 0, 0, 0.87); */
+    /* color: hsl(359, 100%, 50%); */
+/*color: hsla(255, 100%, 50%, 0.5);*/
+background-color:rgba(0, 0, 0, 0.774) 
+;
+    
+}
