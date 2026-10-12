@@ -1,353 +1,478 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Movie Cards</title>
+    <link rel="stylesheet"href="./card.css">
 
     <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #eae5ff;
-            padding: 40px 30px;
-        }
+             font-family: Arial, sans-serif;
+             background-color: #f5f5f5;
+             padding: 0;
+             margin: 0;
+           }
 
         .card-container {
-            background-color: rgb(238, 253, 253);
-
             padding: 40px;
-
             display: grid;
-
-            grid-template-columns: repeat(3, 200px);
-
-            column-gap: 30px;
-            row-gap: 30px;
-
-            justify-content: center;
+            gap: 20px;
+            grid-template-columns:repeat(3,200px);
+            justify-content: center;    
         }
 
         .movie-card {
             width: 200px;
-
             border: 2px solid #00000014;
-
             border-radius: 16px;
-
             background-color: white;
-
             overflow: hidden;
-
-            transition: all 0.5s;
-
-            animation: CardAnimation 1s ease;
-        }
-
-        .movie-card:hover {
-            transform: scale(1.05);
+            opacity: 0;
+            animation: CardAnimation 1s ease-in forwards;
         }
 
         .movie-image {
-            width: 100%;
-            height: 260px;
-
             overflow: hidden;
         }
 
         .movie-image img {
             width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
+            height: auto;
             display: block;
         }
 
         .movie-info {
-            padding: 12px 13px;
+            padding: 12px;
         }
 
         .movie-info h5 {
-            font-size: 16px;
-
             font-weight: 600;
-
-            line-height: 20px;
-
-            margin-bottom: 3px;
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
         .movie-rating {
-            font-size: 12px;
-
-            font-weight: 500;
-
-            line-height: 16px;
-
-            color: #6B7280;
+            font-size: 14px;
+            color: #666;
         }
 
         .book-now {
-            display: block;
-
             margin-top: 12px;
-
-            padding: 9px;
-
-            text-align: center;
-
-            background-color: #e63946;
-
-            color: white;
-
-            border-radius: 6px;
-
-            font-size: 14px;
-
-            font-weight: 600;
         }
 
-        .book-now:hover {
-            background-color: #c1121f;
+        .book-now button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+        }
+
+        .movie-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .movie-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .movie-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .movie-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .movie-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .movie-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .movie-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .movie-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .movie-card:nth-child(9) {
+            animation-delay: 0.9s;
         }
 
         @keyframes CardAnimation {
-
             from {
+                transform: translateY(30px);
                 opacity: 0;
-                transform: translateY(-30px);
             }
 
             to {
+                transform: translateY(0px);
                 opacity: 1;
-                transform: translateY(0);
             }
-
         }
+          .navbar {
+    width: 100%;
+    height: 75px;
+    background: white;
 
-        @media (max-width: 700px) {
+    display: flex;
+    align-items: center;
 
-            .card-container {
-                grid-template-columns: repeat(2, 200px);
-            }
+    border-top: 3px solid #202832;
+    border-bottom: 1px solid #eeeeee;
 
-        }
+    padding: 0 30px;
+    margin: 0;
 
-        @media (max-width: 500px) {
+    box-sizing: border-box;
+}
 
-            .card-container {
-                grid-template-columns: 200px;
-            }
+.logo-section {
+    width: 145px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eeeeee;
+}
 
-        }
+.logo-section img {
+    width: 125px;
+    height: auto;
 
+    /* white logo ko dark bana raha hai */
+    filter: brightness(0) saturate(100%)
+            invert(12%) sepia(18%)
+            saturate(1100%) hue-rotate(175deg)
+            brightness(90%);
+}
+
+.location-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 275px;
+    padding-left: 18px;
+}
+
+.location-icon {
+    font-size: 28px;
+    color: #6947ed;
+}
+
+.city {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.state {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 850px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links .active {
+    background: #eee9ff;
+    color: #34227d;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+}
+
+.search {
+    font-size: 30px;
+    color: #6947ed;
+}
+
+.profile {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #d9dde3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+  @media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }.navlinks {
+        display:none;
+    }
+    .location-section {
+        display:none;
+    }
+}
+
+      
     </style>
-
 </head>
 
-
 <body>
+    
+    <nav class="navbar">
+
+    <div class="logo-section">
+        <img src="https://b.zmtcdn.com/data/edition_assets/17466982242413.svg" alt="District">
+    </div>
+
+    <div class="location-section">
+        <div class="location-icon">⌖</div>
+        <div>
+            <div class="city">Gurugram</div>
+            <div class="state">Haryana</div>
+        </div>
+    </div>
+
+    <div class="nav-links">
+        <a class="active" href="#">For you</a>
+        <a href="#">Dining</a>
+        <a href="#">Movies</a>
+        <a href="#">Events</a>
+        <a href="#">Comedy</a>
+        <a href="#">Stores</a>
+        <a href="#">Activities</a>
+        <a href="#">Play</a>
+    </div>
+
+    <div class="nav-icons">
+        <span class="search">⌕</span>
+        <span class="profile">♙</span>
+    </div>
+
+</nav>
 
     <div class="card-container">
 
-
-        <!-- CARD 1 -->
-
+        
         <div class="movie-card">
 
             <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
                     alt="movie_image">
-
             </div>
 
             <div class="movie-info">
+                <h5 class="movie-title">Hanuman Ansh</h5>
+                <span class="movie-rating">⭐ 9.0 | U | Hindi</span>
 
-                <h5 class="movie-title">
-                    Hanuman Ansh
-                </h5>
-
-                <span class="movie-rating">
-                    U | Hindi
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
             </div>
 
         </div>
 
 
-        <!-- CARD 2 -->
-
+        
         <div class="movie-card">
 
             <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg"
+                <img src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg"
                     alt="movie_image">
-
             </div>
 
             <div class="movie-info">
+                <h5 class="movie-title">Movie 2</h5>
+                <span class="movie-rating">⭐ 8.0 | U | Hindi</span>
 
-                <h5 class="movie-title">
-                    Toxic: A Fairy Tale for Grown-ups
-                </h5>
-
-                <span class="movie-rating">
-                    A | Hindi and 1 more
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
             </div>
 
         </div>
 
 
-        <!-- CARD 3 -->
-
+        
         <div class="movie-card">
 
             <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
                     alt="movie_image">
-
             </div>
 
             <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 8.5 | U | Hindi</span>
 
-                <h5 class="movie-title">
-                    Mirzapur: The Movie
-                </h5>
-
-                <span class="movie-rating">
-                    A | Hindi
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
             </div>
 
         </div>
 
-
-        <!-- CARD 4 -->
-
-        <div class="movie-card">
-
-            <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/AW_Poster-18591030-9548-11f1-b29d-8985d3d6c644.jpg"
-                    alt="movie_image">
-
-            </div>
-
-            <div class="movie-info">
-
-                <h5 class="movie-title">
-                    Awarapan 2
-                </h5>
-
-                <span class="movie-rating">
-                    UA16+ | Hindi
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CARD 5 -->
+        
 
         <div class="movie-card">
 
             <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-5f2b6330-81c7-11f1-92e1-f56ad2bbd334.jpg"
                     alt="movie_image">
-
             </div>
 
             <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 8.0 | U | Hindi</span>
 
-                <h5 class="movie-title">
-                    Hanuman Ansh
-                </h5>
-
-                <span class="movie-rating">
-                    U | Hindi
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
             </div>
 
         </div>
 
+  
+        <div class="movie-card">
 
-        <!-- CARD 6 -->
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1772022739/empkmn8zlqpfo1xvc2ex.png"
+                    alt="movie_image">
+            </div>
+
+            <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 7.5 | U | Hindi</span>
+
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+        
+        
 
         <div class="movie-card">
 
             <div class="movie-image">
-
-                <img
-                    src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                <img src="https://cdn.district.in/movies-assets/images/cinema/mahendra-Giri-83630000-63e5-11f1-a40a-0b97aa7555ef.jpg"
                     alt="movie_image">
-
             </div>
 
             <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 7.3 | U | Hindi</span>
 
-                <h5 class="movie-title">
-                    Hanuman Ansh
-                </h5>
-
-                <span class="movie-rating">
-                    U | Hindi
-                </span>
-
-                <a href="#" class="book-now">
-                    Book Now
-                </a>
-
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
             </div>
 
         </div>
 
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1771999200/t1xf8f9ciyzvemtxk4xl.png"
+                    alt="movie_image">
+            </div>
+
+            <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 7.3 | U | Hindi</span>
+
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+          
+
+           <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1769688166/utjl99stlcisbhb3zfxt.png"
+                    alt="movie_image">
+            </div>
+
+            <div class="movie-info">
+                <h5 class="movie-title">Movie 3</h5>
+                <span class="movie-rating">⭐ 7.4 | U | Hindi</span>
+
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+       
+        <div class="movie-card">
+
+            <div class="movie-image">
+                <img src="https://cdn.district.in/events/cd-media/image/upload/v1762156768/da4rngxll673gjcyudzy.jpg"
+                    alt="movie_image">
+            </div>
+
+            <div class="movie-info">
+                <h5 class="movie-title">Movie 4</h5>
+                <span class="movie-rating">⭐ 8.2 | U | Hindi</span>
+
+                <div class="book-now">
+                    <button onclick ="alert('Booooooooking Confirmed !')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
-</body>
 
+
+
+
+</body>
 </html>

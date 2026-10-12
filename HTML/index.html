@@ -1,123 +1,177 @@
-<!DOCTYPE html>   <!--tells browser you are using HTML5-->
-<html lang="en">   <!--root of an html document-->
-
-<head>             <!--container for metadata-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>  <!--page title-->
+    <title>Document</title>
 </head>
-<body>                <!--contains all data rendered by the browser-->
+<body>
     <h1> hello world!</h1>
-    <p>this is paragraph </p>
-    
-    <h1>Heading1</h1>
-    <h2>Heading2</h2>
-    <h3>Heading3</h3>
-    <h4>Heading4</h4>
-    <h5>Heading5</h5>
-    <h6>Heading6</h6>
-     <p> this is paragraph this is paragraph this is paragraph this is paragraph this is paragraph this is paragraph this is paragraph this is paragraph </p> <!--paragraph tag-->
-    
-       <!-- Anchor Tag -->
-        <a href="https://www.google.com">Google</a>
-        <br>
-        <a href="https://www.youtube.com">Youtube</a>
+    <p>my paragraph</p>
 
-         <!--Image Tag-->
-         <img Src="https://m.media-amazon.com/images/I/51pBPJJBUAL._SX342_SY445_FMwebp_.jpg" />
+    <!--heading tag-->
+    <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<!--paragraph-->
+<p> this is a pragraph</p>
+
+<!--HTML ATTRIBUTES
+ANCHOR TAG-->
+<a href="https://www.google.com/"> google</a href>
+    <br>
+     <!--image tag-->
+     <img src="data:image/png;base64,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" alt="google">
+     <br>
+     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+         alt="Nature"
+         width="150"
+         height="100">
+
+    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000"
+         alt="City"
+         width="150"
+         height="100">
+
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+         alt="Laptop"
+         width="150"
+         height="100">
+
+    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+         alt="Mountain"
+         width="150"
+         height="100">
+
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+         alt="Coffee"
+         width="150"
+         height="100">
          <br>
-          <img Src="https://m.media-amazon.com/images/I/51eDCa3WZ8L._SX425_.jpg"/>
 
 
-          <!--Bold,Italic &Underline Tags-->
-          <p>
-    <b>Importance of Technology in Education</b>
+         <!-- BOLD ITALIC UNDERLINE TAG-->
+          <b>BJP and Congress</b> are currently involved in a major political debate in India.<br>
+
+        <i>Congress</i> and other opposition parties are protesting over the 
+        <u>revision of voter lists</u> and issues related to Form 6.<br>
+
+        Congress leaders are demanding greater transparency from the 
+        <b>Election Commission</b> and have called for the resignation of the Chief Election Commissioner.<br>
+
+        On the other hand, the <i>BJP has rejected these allegations</i> and says that 
+        the opposition is misleading the public.<br>
+
+        The <u>Supreme Court is examining the issues surrounding Form 6</u> and the 
+        Election Commission's records.<br>
+
+        Both sides are presenting their arguments, while the matter continues to be 
+        <b>politically controversial</b>.<br>
+
+        As a citizen, it is important to <i>check reliable sources</i> and understand 
+        <u>both sides of the issue</u> before forming an opinion.
+        <br>
+        <!--hr tag-->
+        <h1>My Website</h1>
+
+          <hr>
+
+           <p>This is my paragraph.</p>
+    
     <br>
-
-    Technology has become an important part of modern education. 
-    It has changed the way students learn, teachers teach, and information is shared.
-    In the past, students mainly depended on textbooks and classroom lectures,
-    but today they can use computers, smartphones, and the internet to access
-    a huge amount of information.
+    <!--suscript-->
+    H<sub>2</sub>O
     <br>
-
-    <i>Online learning has made education more flexible and accessible.</i>
-    Students can attend classes from home, watch educational videos,
-    read digital books, and practice questions using different online platforms.
-    Technology also helps students understand difficult concepts through
-    animations, simulations, and interactive activities.
+    <!--Superscript-->
+    x<sup>2</sup>
     <br>
+    <!--pre tag-->
+    <pre>
+This is written
+using pre
+tag
+</pre>
+<br>
 
-    One of the biggest advantages of technology is that it allows students
-    to learn at their own speed. A student can watch a lesson multiple times
-    until the concept becomes clear. Teachers can also use technology to
-    create interesting presentations, online quizzes, and assignments.
-    <br><br>
 
-    <b>Technology is not a replacement for teachers;</b> instead, it is a
-    powerful tool that helps teachers make learning more effective.
-    Students should use technology responsibly and focus on learning rather
-    than wasting time on unnecessary activities.
-    <br>
 
-    <u>Smart use of technology can make education easier, faster, and more engaging.</u>
-    In the future, technologies such as artificial intelligence, virtual reality,
-    and online learning platforms may provide even more opportunities for students.
-    <br>
-
-    <i>Therefore, technology and education can work together to build a
-    better learning environment and prepare students for the future.</i>
-</p>
-
-<!--big small tag-->
-<h1>Big & Small Tags</h1>
-
-    <p>
-        Used to display <big>big text</big> and <small>small text</small>
-        on your page.
-    </p>
-
-    <p>
-        <big>This is Big Text</big>
-        <br><br>
-        <small>This is Small Text</small>
-    </p>
-   <!--hr tag-->
-    <hr>
-
-    <h1>HR Tag</h1>
-
-    <p>
-        The HR tag is used to display a horizontal ruler
-        and separate different content.
-    </p>
-
-    <hr/>
-<!--Subscription &SuperScript Tag -->
-<h1>Subscript & Superscript Tag</h1>
-
-    <p>Used to display subscript and superscript text.</p>
-
-    <p>
-        H<sub>2</sub>O
-    </p>
-
-    <p>
-        A<sup>n</sup> + B
-    </p>
+    <!-- Q1 -->
+    <h1>My First HTML Page</h1>
+    <h2>Welcome to My Website</h2>
+    <h3>This is My Subheading</h3>
 
     <hr>
 
-    <h1>Pre Tag</h1>
+    <!-- Q2 -->
+    <h2>My Wallpaper Images</h2>
 
-    <p>Used to display text as it is, without ignoring spaces and next lines.</p>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+         alt="Nature" width="150" height="100">
+
+    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000"
+         alt="City" width="150" height="100">
+
+    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+         alt="Laptop" width="150" height="100">
+
+    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+         alt="Mountain" width="150" height="100">
+
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+         alt="Coffee" width="150" height="100">
+
+    <hr>
+
+    <!-- Q3 -->
+    <h2>Line Break Practice</h2>
 
     <pre>
-This
-    is a sample
-        text.
+This is line one.
+This is line two.
+This is line three.
     </pre>
 
+    <p>
+        This is line one.<br>
+        This is line two.<br>
+        This is line three.<br>
+        This is line four.
+    </p>
+
+    <hr>
+
+    <!-- Q4 -->
+    <h2>Chemical Equation</h2>
+
+    <p>
+        C + O<sub>2</sub> 
+    </p>
+
+    <hr>
+
+    <!-- Q5 -->
+    <h2>Wikipedia Article</h2>
+
+    <p>
+        <b>HTML</b> stands for <i>HyperText Markup Language</i>.
+        It is the standard language used to create webpages.<br><br>
+
+        HTML uses different <u>tags and elements</u> to structure
+        the content of a webpage.<br><br>
+
+        A webpage can contain headings, paragraphs, images,
+        links, tables, forms and many other elements.
+    </p>
+
+
+    <br>
+
+
+
+
 </body>
-</body>   
 </html>

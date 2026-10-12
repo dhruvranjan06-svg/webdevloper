@@ -1,0 +1,1 @@
+console.log("Hello this is js console running from index.js file");

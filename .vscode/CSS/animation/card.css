@@ -1,0 +1,248 @@
+
+        
+        body {
+             font-family: Arial, sans-serif;
+             background-color: #f5f5f5;
+             padding: 0;
+             margin: 0;
+           }
+
+        .card-container {
+            padding: 40px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns:repeat(3,200px);
+            justify-content: center;    
+        }
+
+        .movie-card {
+            width: 200px;
+            border: 2px solid #00000014;
+            border-radius: 16px;
+            background-color: white;
+            overflow: hidden;
+            opacity: 0;
+            animation: CardAnimation 1s ease-in forwards;
+        }
+
+        .movie-image {
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .movie-info {
+            padding: 12px;
+        }
+
+        .movie-info h5 {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .movie-rating {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .book-now {
+            margin-top: 12px;
+        }
+
+        .book-now button {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 8px;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+        }
+
+        .movie-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .movie-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .movie-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .movie-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .movie-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .movie-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .movie-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .movie-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .movie-card:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes CardAnimation {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+          .navbar {
+    width: 100%;
+    height: 75px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 3px solid #202832;
+    border-bottom: 1px solid #eeeeee;
+
+    padding: 0 30px;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.logo-section {
+    width: 145px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eeeeee;
+}
+
+.logo-section img {
+    width: 125px;
+    height: auto;
+
+    /* white logo ko dark bana raha hai */
+    filter: brightness(0) saturate(100%)
+            invert(12%) sepia(18%)
+            saturate(1100%) hue-rotate(175deg)
+            brightness(90%);
+}
+
+.location-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 275px;
+    padding-left: 18px;
+}
+
+.location-icon {
+    font-size: 28px;
+    color: #6947ed;
+}
+
+.city {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.state {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 850px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links .active {
+    background: #eee9ff;
+    color: #34227d;
+    padding: 12px 22px;
+    border-radius: 25px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+}
+
+.search {
+    font-size: 30px;
+    color: #6947ed;
+}
+
+.profile {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #d9dde3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+  @media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }.navlinks {
+        display:none;
+    }
+    .location-section {
+        display:none;
+    }
+}
+
+      
+    
